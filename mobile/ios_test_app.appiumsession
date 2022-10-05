@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "caps": [
+    {
+      "type": "text",
+      "name": "platformName",
+      "value": "iOS"
+    },
+    {
+      "type": "text",
+      "name": "appium:platformVersion",
+      "value": "16.0"
+    },
+    {
+      "type": "text",
+      "name": "appium:deviceName",
+      "value": "iPhone 14"
+    },
+    {
+      "type": "text",
+      "name": "appium:automationName",
+      "value": "xcuitest"
+    },
+    {
+      "type": "text",
+      "name": "appium:app",
+      "value": "/Users/tomasquinones/My_Dev/HeadSpin/mobile/TheApp.app.zip"
+    }
+  ],
+  "server": {
+    "local": {},
+    "remote": {
+      "hostname": "localhost",
+      "port": "4723",
+      "path": "/"
+    },
+    "sauce": {
+      "dataCenter": "us-west-1"
+    },
+    "headspin": {},
+    "browserstack": {},
+    "lambdatest": {},
+    "advanced": {},
+    "bitbar": {},
+    "kobiton": {},
+    "perfecto": {},
+    "pcloudy": {},
+    "testingbot": {},
+    "experitest": {},
+    "roboticmobi": {}
+  },
+  "serverType": "remote",
+  "visibleProviders": []
+}
