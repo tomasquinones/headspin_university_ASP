@@ -6,7 +6,7 @@ CUR_DIR = path.dirname(path.abspath(__file__))
 APP = path.join(CUR_DIR, "..", "mobile", "TheApp.app.zip")
 APPIUM = "http://localhost:4723"
 
-
+# TODO: Lookup more about fixtures
 @pytest.fixture  # turns a function into a fixture
 def driver():
     CAPS = {
