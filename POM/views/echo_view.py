@@ -1,4 +1,5 @@
 from appium.webdriver.common.mobileby import MobileBy
+from selenium.common.exceptions import TimeoutException
 from views.base_view import BaseView
 
 
@@ -12,7 +13,13 @@ class EchoView(BaseView):
         self.find(self.SAVE_BUTTON).click()
 
     def read_message(self):
-        return self.find(self.MESSAGE_LABEL).text
+        try:
+            return self.wait_for(self.MESSAGE_LABEL).text
+        except TimeoutException:
+            return None
 
     def nav_back(self):
+        from views.home_view import HomeView
+
         self.driver.back()
+        return HomeView(self.driver)

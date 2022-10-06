@@ -1,5 +1,6 @@
 from appium.webdriver.common.mobileby import MobileBy
 from views.base_view import BaseView
+from views.echo_view import EchoView
 
 
 class HomeView(BaseView):
@@ -7,3 +8,5 @@ class HomeView(BaseView):
 
     def nav_to_echo_box(self):
         self.wait_for(self.ECHO_ITEM).click()
+
+        return EchoView(self.driver)

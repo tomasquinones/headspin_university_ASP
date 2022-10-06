@@ -1,6 +1,7 @@
 import pytest
 from appium import webdriver
 from os import path
+from views.home_view import HomeView
 
 CUR_DIR = path.dirname(path.abspath(__file__))
 IOS_APP = path.join(CUR_DIR, "..", "mobile", "TheApp.app.zip")
@@ -8,8 +9,8 @@ ANDROID_APP = path.join(CUR_DIR, "..", "mobile", "TheApp.apk")
 
 APPIUM = "http://localhost:4723"
 
-# TODO: Lookup more about fixtures
-@pytest.fixture  # turns a function into a fixture
+
+@pytest.fixture
 def driver():
     """Defines and instanciates the webdriver."""
 
@@ -36,3 +37,8 @@ def driver():
 
     yield driver  # returns driver, runs code, then returns to this function
     driver.quit()
+
+
+@pytest.fixture
+def home(driver):
+    return HomeView(driver)
